@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="cards">
+    <div *ngFor="let user of users">
+      <nz-card
+        class="user-card"
+        (click)="showUserInfo(user.id)"
+        nzHoverable
+      >
+        <nz-card-meta
+          [nzTitle]="user.name"
+          [nzDescription]="user.username"
+        ></nz-card-meta>
+        <div class="info-btns">
+          <button nz-button nzType="default" (click)="showChangeUser(user.id)">
+            Change
+          </button>
+          <button nz-button nzType="default" (click)="delUser(user.id, $event)">
+            Delete
+          </button>
+        </div>
+      </nz-card>
+    </div>
+  </div>
+</div>
+<button class="create-btn" nz-button nzType="primary" nzSize="large" (click)="showCreateUser()">
+  Create user
+</button>

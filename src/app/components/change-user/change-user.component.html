@@ -1,0 +1,83 @@
+
+  <div class="form-wrapper">
+    <form nz-form [formGroup]="userForm">
+      <nz-form-item>
+        <nz-form-label [nzSm]="6" [nzXs]="24" nzFor="name" nzRequired
+          >Name</nz-form-label
+        >
+        <nz-form-control
+          [nzSm]="14"
+          [nzXs]="24"
+          nzErrorTip="Please input your name!"
+        >
+          <input nz-input type="name" id="name" formControlName="name" />
+        </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+        <nz-form-label [nzSm]="6" [nzXs]="24" nzFor="username" nzRequired
+          >Username</nz-form-label
+        >
+        <nz-form-control
+          [nzSm]="14"
+          [nzXs]="24"
+          nzErrorTip="Please input your username!"
+        >
+          <input
+            nz-input
+            type="username"
+            id="username"
+            formControlName="username"
+          />
+        </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+        <nz-form-label [nzSm]="6" [nzXs]="24" nzRequired nzFor="email"
+          >E-mail</nz-form-label
+        >
+        <nz-form-control
+          [nzSm]="14"
+          [nzXs]="24"
+          nzErrorTip="The input is not valid E-mail!"
+        >
+          <input nz-input formControlName="email" id="email" />
+        </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+        <nz-form-label [nzSm]="6" [nzXs]="24" nzFor="phone" nzRequired
+          >Phone</nz-form-label
+        >
+        <nz-form-control
+          [nzSm]="14"
+          [nzXs]="24"
+          nzErrorTip="Please input your phone!"
+        >
+          <input nz-input id="phone" formControlName="phone" />
+        </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+        <nz-form-label [nzSm]="6" [nzXs]="24" nzFor="website" nzRequired
+          >Website</nz-form-label
+        >
+        <nz-form-control
+          [nzSm]="14"
+          [nzXs]="24"
+          nzErrorTip="Please input your website!"
+        >
+          <input nz-input  id="website" formControlName="website" />
+        </nz-form-control>
+      </nz-form-item>
+      <nz-form-item nz-row>
+        <nz-form-control [nzSpan]="14" [nzOffset]="6">
+          <button
+            nz-button
+            nzType="primary"
+            (click)="submitInfo()"
+            [disabled]="userForm.invalid"
+          >
+            Save
+          </button>
+        </nz-form-control>
+      </nz-form-item>
+    </form>
+  </div>
+
