@@ -1,6 +1,7 @@
 # angular-testtask
 Небольшое Angular-приложение, которое взаимодействует с внешним API для отображения и управления данными о пользователях
 
+### Github Pages: https://bjalyona.github.io/angular-testtask/
 
 ### Инструкция по запуску
 
